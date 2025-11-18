@@ -5,8 +5,6 @@ ENv  MONGO_DB_USERNAME = admin\
         
 RUN mkdie -p testapp 
 
-
-
 COPY . / testapp
 
 cmd ["node", "/DOCKER-TESTAPP-MAIN/server.js"]
