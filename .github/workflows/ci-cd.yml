@@ -42,6 +42,9 @@ jobs:
       - name: Stop Running Containers
         run: |
           docker-compose down || true
+          
+      - name: Show directory structure
+        run: ls -R
 
       - name: Start Updated Containers
         run: |
