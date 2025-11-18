@@ -45,5 +45,5 @@ jobs:
 
       - name: Start Updated Containers
         run: |
-          docker compose up -d
+          docker compose -f mongo.yaml up -d
 
