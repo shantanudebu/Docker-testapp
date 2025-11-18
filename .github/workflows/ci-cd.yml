@@ -27,7 +27,7 @@ jobs:
 
       - name: Push Docker Image
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/testapp:${{ github.sha }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/testapp:${{ github.sha }} .
 
   deploy:
     runs-on: self-hosted
@@ -36,7 +36,7 @@ jobs:
     steps:
       - name: Pull Latest Image
         run: |
-          docker pull ${{ secrets.DOCKER_USERNAME }}/testapp:${{ github.sha }}
+          docker pull ${{ secrets.DOCKER_USERNAME }}/testapp:${{ github.sha }} .
 
       - name: Stop Running Containers
         run: |
